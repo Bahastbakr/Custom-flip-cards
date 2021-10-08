@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("clouds.png");
+
+        }
+
+        #holder {
+            display: flex;
+            margin-top: 120px;
+        }
+
+        /* umbrella */
+        .container {
+            padding: 50px;
+            height: 200px;
+            width: 300px;
+            position: relative;
+            margin: 10px;
+
+        }
+
+        .container * {
+            position: absolute;
+
+        }
+
+        ::before,
+        ::after {
+            content: '';
+            position: absolute;
+
+        }
+
+        .umb,
+        .umb::before {
+            height: 190px;
+            width: 190px;
+            background: rgb(0, 23, 153);
+        }
+
+        .umb {
+            top: 50px;
+            left: 50px;
+            border-top-left-radius: 300%;
+        }
+
+        .umb::before {
+            left: 190px;
+            border-top-right-radius: 300%;
+        }
+
+        .umb::after {
+            height: 100%;
+            width: 160px;
+            background: rgb(0, 23, 153);
+            left: 110px;
+            border-radius: 200% 200% 0 0;
+
+        }
+
+        .rond {
+            list-style: none;
+            height: 50px;
+            width: 380px;
+            padding: 0;
+            top: 140px;
+            z-index: 6;
+
+        }
+
+        .rond li {
+            width: 76px;
+            height: 76px;
+            background: rgb(0, 23, 153);
+            border-radius: 50%;
+            background: #A8DFFF;
+        }
+
+        .rond .r2 {
+            left: 76px;
+        }
+
+        .rond .r3 {
+            left: 152px;
+
+        }
+
+        .rond .r4 {
+            left: 228px;
+
+        }
+
+        .rond .r5 {
+            left: 304px;
+
+        }
+
+        .rond::before {
+            height: 350px;
+            width: 10px;
+            background: rgb(0, 23, 153);
+            top: -185px;
+            border-radius: 15px 15px 0 0;
+            left: 185px;
+            z-index: 5;
+        }
+
+        .rond::after {
+            width: 10px;
+            height: 156px;
+            background: rgb(0, 23, 153);
+            top: -155.5px;
+            left: 185px;
+            z-index: 9;
+
+        }
+
+        .hand {
+            height: 50px;
+            width: 50px;
+            border-style: solid;
+            border-color: rgb(0, 23, 153);
+            border-width: 13px;
+            top: 321px;
+            border-top: none;
+            border-radius: 0 0 200% 200%;
+            left: 121px;
+            z-index: 15;
+
+        }
+
+        /* --------------------------------- */
+        /* circle */
+
+        #circle {
+            width: 400px;
+            height: 400px;
+            background: rgb(0, 121, 20);
+            border-radius: 50%
+        }
+
+        /* --------------------------- */
+        /* triangle */
+        #triangle {
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 400px solid red;
+        }
+
+        /* ------------------ */
+        #star {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 0.9em;
+            margin-right: 0.9em;
+            margin-bottom: 1.2em;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0.7em solid #fc0;
+            border-left: 0.3em solid transparent;
+            font-size: 230px;
+        }
+
+        #star:before,
+        #star:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0.6em;
+            left: -1em;
+            border-right: 1em solid transparent;
+            border-bottom: 0.7em solid #fc0;
+            border-left: 1em solid transparent;
+            transform: rotate(-35deg);
+        }
+
+        #star:after {
+            transform: rotate(35deg);
+        }
+
+        /* star */
+    </style>
+    <title>Squid game shapes css</title>
+</head>
+
+<body>
+    <div id="holder">
+        <!-- umbrella -->
+        <div class="container">
+            <div class="umb">
+                <ul class="rond">
+                    <li class="r1"></li>
+                    <li class="r2"></li>
+                    <li class="r3"></li>
+                    <li class="r4"></li>
+                    <li class="r5"></li>
+                </ul>
+                <div class="hand"></div>
+            </div>
+        </div>
+        <!-- ------------------------- -->
+        <!-- circle -->
+        <div class="container">
+            <div id="circle">
+
+            </div>
+        </div>
+        <!-- ---------------- -->
+        <!-- triangle -->
+        <div class="container">
+            <div id="triangle">
+
+            </div>
+        </div>
+
+        <!-- ---------------------- -->
+        <!-- star -->
+        <div class="container">
+            <div id="star">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
