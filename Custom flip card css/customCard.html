@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url('wallpaper.jpg');
+            background-color: #2d2d2db7;
+            background-blend-mode: multiply;
+            background-size: cover;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .card {
+            border-radius: 20px;
+            margin: 20px;
+            width: 700px;
+            height: 300px;
+            font-family: 'UniSIRWAN Cairo Black';
+
+
+        }
+
+        .card.winter {
+            background-image: url('winter.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card.summer {
+            background-image: url('summer.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card.spring {
+            background-image: url('spring.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card.autumn {
+            background-image: url('autumn.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+
+        }
+
+        .card:hover .content {
+            transform: rotateY(180deg);
+            transition: transform 0.5s;
+
+        }
+
+
+
+        .front,
+        .back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.651);
+            color: #2d2d2d;
+            text-align: center;
+            line-height: 230px;
+            font-size: 50px;
+            border-radius: 20px;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            font-family: 'UniSIRWAN Cairo Light';
+            background: #2d2d2dd0;
+            color: white;
+            line-height: 35px;
+            font-size: 20px;
+            transform: rotateY(180deg);
+            text-align: justify;
+            direction: rtl;
+
+        }
+
+        .back p {
+            padding: 30px;
+        }
+    </style>
+    <title>Custom flip card css and html</title>
+</head>
+
+<body>
+
+</body>
+
+
+<div class="row">
+    <div class="card winter">
+        <div class="content">
+            <div class="front">
+                زستان
+            </div>
+            <div class="back">
+                <p>زستان یەکێکە لە چوار وەرزەکەی ساڵ و لە دوای پاییز دێت، لەم وەرزەدا شەو درێژ دەبێت و ڕۆژ کورت
+                    دەبێتەوە.
+                    ئەم وەرزە بە ساردی و سەرما جیادەکرێتەوە. وەرزی بارینی باران و بەفر و ھەڵکردنی ڕەشەبای سارد و زریانە
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card autumn">
+        <div class="content">
+            <div class="front">
+                پاییز
+            </div>
+            <div class="back">
+                <p>پاییز یەکێکە لە چوار وەرزەکەی ساڵ کە لە دوای ھاوین دێت و لە پێش زستان. لە نیوەگۆی باکووری زەویدا دەست
+                    پێ دەکات لە ٢٢ی ئەیلوول تا ٢٠ی کانوونی یەکەم و لە نیوەگۆی باشووری زەویدا پێچەوانە دەبێتەوە کاتەکەی.
+                    لەم وەرزەدا ماوەی شەو و ڕۆژ یەکسان دەبن و تیاییدا گەڵای دار و درەختەکان ئەوەرێت.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card spring">
+        <div class="content">
+            <div class="front">
+                بەهار
+            </div>
+            <div class="back">
+                <p>بەھار یەکێکە لە چوار وەرزەکەی ساڵ، کەش و ھەوایەکی مامناوەندی ھەیە، و بە قۆناغی گواستنەوە دادەنرێت لە
+                    وەرزی زستانەوە بۆ ھاوین، لەم وەرزەدا گوڵەکان ئەکرێنەوە و ئاووھەوا مام ناوەند دەبێت لە نێوان سارد و
+                    گەرمدا.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card summer">
+        <div class="content">
+            <div class="front">
+                هاوین
+            </div>
+            <div class="back">
+                <p>ھاوین، یەکێکە لە چوار وەرزەکەی ساڵ، لە ھەموویان گەرمترە، لە نیوەگۆی باکووری زەویدا لە ٢٢ی حوزەیران
+                    دەست پێدەکات تا ٢٢ی ئەیلوول، لە نیوەگۆی باشووری زەوییدا لە ٢١ی کانوونی یەکەم دەست پێدەکات تا ٢٢ی
+                    ئازار. لەم وەرزەدا ڕۆژ درێژ دەبێت و شەو کورت دەبێتەوە لە نیوەگۆی باکووری زەویدا.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>
